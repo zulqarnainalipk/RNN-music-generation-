@@ -1,6 +1,6 @@
 
 ---
-🎶 **Architectural Decision Document: RNN Music Generation with TensorFlow and Keras** 🎵
+## 🎶 **Architectural Decision Document: RNN Music Generation with TensorFlow and Keras** 🎵
 
 ### 1. Introduction
 Welcome to the Architectural Decision Document for RNN Music Generation! 🎼 In this document, we'll dive into the architectural choices behind implementing RNN (Recurrent Neural Network) music generation using TensorFlow and Keras.
