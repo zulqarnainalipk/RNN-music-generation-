@@ -1,57 +1,52 @@
+# 🎵 RNN Music Generator
 
----
-# 🎶 **RNN Music Generation with TensorFlow and Keras** 
+## Project Overview
 
-### 1. Introduction
-Welcome to the Architectural Decision Document for RNN Music Generation! 🎼 In this document, we'll dive into the architectural choices behind implementing RNN (Recurrent Neural Network) music generation using TensorFlow and Keras.
+Welcome to the fascinating world of music generation using advanced machine learning techniques! In this project, I've crafted a sophisticated recurrent neural network (RNN) model capable of generating musical notes. Leveraging a rich dataset consisting of enchanting piano MIDI files sourced from the prestigious MAESTRO dataset, this model is trained to predict the subsequent note in a sequence, empowering it to compose beautiful melodies autonomously. Moreover, it can extend its creations by conjuring longer sequences of notes, mesmerizing listeners with its harmonic prowess.
+👉 [Check this project on Kaggle](https://www.kaggle.com/code/zulqarnainalipk/rnn-music-generator) 👈
+## Setup 🛠️
 
-### 2. Problem Statement
-Let's harmonize our understanding: we aim to compose musical masterpieces using RNNs, capturing the essence of sequential musical data to generate fresh tunes! 🎶
+Prepare your environment with the following dependencies to embark on this musical journey:
 
-### 3. Architectural Overview
-Let's groove through the architecture:
-#### 3.1 Data Preparation
-Prepare your musical dataset for the jam session! 🎵
-#### 3.2 Model Architecture
-🎹 **Input Layer:** Where the melody begins.  
-🎶 **LSTM Layer:** Capturing musical nuances and rhythms.  
-🎼 **Output Layer:** Predicting the next musical note.  
-#### 3.3 Training Process
-Let the training symphony commence!
-#### 3.4 Music Generation
-Compose a new melody with the trained model. Let the music flow! 🌟
+```bash
+sudo apt install -y fluidsynth
 
-### 4. Key Architectural Decisions
-Let's dissect the core decisions:
-#### 4.1 Choice of RNN Model
-LSTM: The maestro behind capturing musical intricacies. 🎻
-#### 4.2 Data Representation
-Musical data encoded for the neural orchestra to interpret. 🎸
-#### 4.3 Loss Function Selection
-Guiding the training with the right musical notes. 📉
-#### 4.4 Hyperparameter Tuning
-Fine-tuning for the perfect harmony. 🎵
+pip install --upgrade pyfluidsynth
 
-### 5. Benefits and Future Enhancements
-Hear the melody of benefits and future tunes:
-#### Benefits:
-- 🚀 **Seamless Integration:** TensorFlow and Keras - the dynamic duo for musical innovation!
-- 🎵 **Capturing Musical Patterns:** LSTM's prowess in grasping musical intricacies.
-- 💡 **Flexibility:** Room for enhancement to foster creativity.
+pip install pretty_midi
+```
 
-#### Future Enhancements:
-- 🎯 **Attention Mechanisms:** Focus on the significant musical elements.
-- 🎮 **Reinforcement Learning:** Guiding the melody with rewards.
-- ⚙️ **Model Optimization:** Enhance performance with advanced techniques.
+## Dataset Information 📊
 
-### 6. Conclusion
-In symphony's final crescendo, TensorFlow and Keras orchestrate a melodious journey into the realm of RNN Music Generation. Let the harmony continue to evolve! 🎶
+Dive into the realm of musical exploration with our meticulously curated dataset. Immerse yourself in the melodies as you explore infant mortality rates categorized by year and maternal race or ethnicity. Let the rhythm guide your analysis, uncovering insights that harmonize with the melody of data-driven discovery.
 
----
+## Usage 📝
 
-## Keep Exploring! 👀
+Unlock the secrets of the dataset with ease:
 
-Thank you for delving into this notebook! If you found it insightful or beneficial, I encourage you to explore more of my projects and contributions on my profile.
+```python
+data_dir = pathlib.Path('data/maestro-v2.0.0')
+if not data_dir.exists():
+  tf.keras.utils.get_file(
+      'maestro-v2.0.0-midi.zip',
+      origin='https://storage.googleapis.com/magentadata/datasets/maestro/v2.0.0/maestro-v2.0.0-midi.zip',
+      extract=True,
+      cache_dir='.', cache_subdir='data',
+  )
+```
+
+## Exploratory Data Analysis (EDA) 📈
+
+Embark on a voyage of discovery as we unravel the mysteries hidden within the dataset. Explore mortality rates by ethnicity through captivating visualizations such as bar plots and pie charts. Uncover trends over time and delve into the intricate relationships between variables, painting a vivid portrait of insights waiting to be uncovered.
+
+- **Bar Plots for Mortality Rates by Ethnicity**: Visualize the tapestry of mortality rates across diverse ethnicities, revealing patterns that resonate with the rhythms of life.
+- **Pie Chart for Ethnicity Distribution**: Dive into the kaleidoscope of ethnic diversity, capturing the essence of multiculturalism in a single glance.
+- **Line Plot for Infant Mortality Rate Over Time**: Traverse the epochs of time as you chart the trajectory of infant mortality rates, witnessing the ebb and flow of life's symphony.
+- **Bar Plot of Average Yearly Deaths by Ethnicity**: Peer into the annals of history, where each bar tells a story of triumphs and tragedies, echoing through the corridors of time.
+- **Bar Plot of Average Yearly Live Births by Ethnicity**: Witness the miracle of life unfold before your eyes, as each bar represents the dawn of a new beginning.
+- **Scatter Plot for Infant Mortality Rate vs. Number of Live Births**: Explore the intricate dance between life and death, as data points weave a narrative of hope and resilience.
+
+
 
 👉 [Visit my Profile](https://www.kaggle.com/zulqarnainalipk) 👈
 
