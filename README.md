@@ -16,9 +16,6 @@ pip install --upgrade pyfluidsynth
 pip install pretty_midi
 ```
 
-## Dataset Information 📊
-
-Dive into the realm of musical exploration with our meticulously curated dataset. Immerse yourself in the melodies as you explore infant mortality rates categorized by year and maternal race or ethnicity. Let the rhythm guide your analysis, uncovering insights that harmonize with the melody of data-driven discovery.
 
 ## Usage 📝
 
